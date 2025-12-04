@@ -21,11 +21,13 @@ body {
     padding: 40px;
     border-radius: 16px;
     text-align: center;
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 400px;       /* largeur max pour desktop */
+    margin: 0 auto;         /* centre parfaitement horizontalement */
     position: relative;
     z-index: 10;
     transition: 0.3s ease;
+    box-sizing: border-box; /* inclut padding dans la largeur */
 }
 
 /* Logo et badge */
@@ -80,6 +82,7 @@ input[type="text"], input[type="password"] {
     border: none;
     outline: none;
     font-size: 14px;
+    box-sizing: border-box; /* inclut padding dans la largeur */
 }
 
 /* Bouton connexion */
@@ -119,7 +122,7 @@ button:hover {
     background: rgba(0,0,0,0.45);
     display: none;
     z-index: 90;
-    pointer-events: none; /* <- empêche le clic quand caché */
+    pointer-events: none;
 }
 
 /* ======= POPUP ERREUR ======= */
@@ -138,18 +141,16 @@ button:hover {
     z-index: 100;
     display: none;
     transition: 0.25s ease;
-    pointer-events: none; /* <- empêche le clic quand caché */
+    pointer-events: none;
 }
 
-/* Quand popup actif */
 #errorPopup.active {
     display: block;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-    pointer-events: auto; /* <- active le clic seulement quand visible */
+    pointer-events: auto;
 }
 
-/* Texte popup */
 #popupMessage {
     font-weight: 600;
     margin-bottom: 18px;
@@ -171,13 +172,11 @@ button:hover {
     cursor: pointer;
 }
 
-/* Bouton Annuler */
 #closePopup {
     background-color: #ccc;
     color: #000;
 }
 
-/* Bouton aide */
 #helpBtn {
     background-color: #1877f2;
     color: #fff;
