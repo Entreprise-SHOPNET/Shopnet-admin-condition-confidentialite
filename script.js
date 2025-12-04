@@ -54,7 +54,6 @@ function showError(message) {
     // Affiche popup + flou
     blurOverlay.style.display = "block";
     errorPopup.classList.add("active");
-    errorPopup.style.display = "block";
 }
 
 // Bouton Annuler → fermer popup

@@ -1,4 +1,6 @@
 
+
+
 /* Police globale */
 body {
     margin: 0;
@@ -117,6 +119,7 @@ button:hover {
     background: rgba(0,0,0,0.45);
     display: none;
     z-index: 90;
+    pointer-events: none; /* <- empêche le clic quand caché */
 }
 
 /* ======= POPUP ERREUR ======= */
@@ -135,6 +138,7 @@ button:hover {
     z-index: 100;
     display: none;
     transition: 0.25s ease;
+    pointer-events: none; /* <- empêche le clic quand caché */
 }
 
 /* Quand popup actif */
@@ -142,6 +146,7 @@ button:hover {
     display: block;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto; /* <- active le clic seulement quand visible */
 }
 
 /* Texte popup */
