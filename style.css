@@ -1,5 +1,4 @@
 
-
 /* Police globale */
 body {
     margin: 0;
@@ -23,7 +22,6 @@ body {
     width: 90%;
     max-width: 400px;
     position: relative;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     z-index: 10;
     transition: 0.3s ease;
 }
@@ -134,7 +132,6 @@ button:hover {
     padding: 24px;
     border-radius: 16px;
     text-align: center;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     z-index: 100;
     display: none;
     transition: 0.25s ease;
@@ -148,11 +145,6 @@ button:hover {
 }
 
 /* Texte popup */
-#errorPopup h2 {
-    color: #ff4d4d;
-    margin-bottom: 10px;
-}
-
 #popupMessage {
     font-weight: 600;
     margin-bottom: 18px;
@@ -195,5 +187,8 @@ button:hover {
         width: 48px;
         height: 48px;
         font-size: 36px;
+    }
+    .popup-buttons {
+        flex-direction: column;
     }
 }
