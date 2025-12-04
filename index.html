@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPNET Admin Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: rgba(0,0,0,0.7);
+            padding: 40px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #FFD700;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #FFD700;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #FFC700;
+        }
+
+        .error {
+            color: #FF6B6B;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 500px) {
+            .login-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_Shopnet.png" alt="Logo SHOPNET">
+        <h1>Admin SHOPNET</h1>
+        <input type="text" id="username" placeholder="Entrez votre nom complet">
+        <input type="password" id="accessCode" placeholder="Entrez le code d'accès">
+        <button id="loginBtn">Se connecter</button>
+        <div id="error" class="error"></div>
+    </div>
+
+    <script>
+        // Liste des admins autorisés
+        const admins = [
+            "Tegra Kanyinda",
+            "Pasua Ndaye Jonathan",
+            "Melissa Bamusamba",
+            "Joseph",
+            "David Kubaka",
+            "Dorcas",
+            "Jean Salumu"
+        ];
+
+        const correctCode = "Adminshopnet.2025";
+
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            const username = document.getElementById('username').value.trim();
+            const accessCode = document.getElementById('accessCode').value.trim();
+            const errorDiv = document.getElementById('error');
+
+            if (admins.includes(username) && accessCode === correctCode) {
+                // Afficher un bouton pour accéder à admin-dashboard
+                errorDiv.innerHTML = `<button onclick="goToDashboard()" style="
+                    padding: 12px 20px;
+                    background-color: #FFD700;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    margin-top: 10px;
+                ">Accéder au Dashboard</button>`;
+            } else {
+                errorDiv.textContent = "Vous n'êtes pas les admins de SHOPNET ou veuillez vérifier vos informations.";
+            }
+        });
+
+        function goToDashboard() {
+            window.location.href = "admin-dashboard.html";
+        }
+    </script>
+</body>
+</html>
