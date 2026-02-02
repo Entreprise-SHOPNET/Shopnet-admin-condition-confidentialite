@@ -12,8 +12,8 @@ const closePopup = document.getElementById("closePopup");
 const helpBtn = document.getElementById("helpBtn");
 
 // Identifiants ADMIN officiels
-const ADMIN_USERNAME = "ADMIN SHOPNET 2026";
-const ADMIN_PASSWORD = "SHOPNET 2026";
+const ADMIN_USERNAME = "shopnet";
+const ADMIN_PASSWORD = "123456";
 
 // Soumission du formulaire
 loginForm.addEventListener("submit", function (e) {
