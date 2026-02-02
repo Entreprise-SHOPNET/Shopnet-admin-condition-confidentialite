@@ -11,25 +11,16 @@ const popupMessage = document.getElementById("popupMessage");
 const closePopup = document.getElementById("closePopup");
 const helpBtn = document.getElementById("helpBtn");
 
-// Liste des administrateurs autorisés
-const allowedUsers = [
-    "Tegra Kanyinda",
-    "Pasua Ndaye Jonathan",
-    "katubayi bamusamba Melissa",
-    "Umba lenge joseph",
-    "David Kubaka",
-    "Dorcas shopnet",
-    "Jean Salumu"
-];
-
-// Code d’accès correct
-const correctCode = "Adminshopnet.2025";
+// Identifiants ADMIN officiels
+const ADMIN_USERNAME = "ADMIN SHOPNET 2026";
+const ADMIN_PASSWORD = "SHOPNET 2026";
 
 // Soumission du formulaire
 loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    const username = usernameInput.value.trim();
-    const code = accessCodeInput.value.trim();
+
+    const username = usernameInput.value.trim().toLowerCase();
+    const code = accessCodeInput.value.trim().toLowerCase();
 
     // Champs vides
     if (!username || !code) {
@@ -37,9 +28,12 @@ loginForm.addEventListener("submit", function (e) {
         return;
     }
 
-    // Mauvais nom ou mauvais code
-    if (!allowedUsers.includes(username) || code !== correctCode) {
-        showError("Informations incorrectes !");
+    // Vérification identifiant + mot de passe (insensible à la casse)
+    if (
+        username !== ADMIN_USERNAME.toLowerCase() ||
+        code !== ADMIN_PASSWORD.toLowerCase()
+    ) {
+        showError("Identifiant ou mot de passe incorrect !");
         return;
     }
 
