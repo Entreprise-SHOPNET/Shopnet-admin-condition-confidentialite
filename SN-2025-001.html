@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vérification Administrateur SHOPNET</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background: #1e293b;
+        width: 420px;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        animation: fadeIn 1.5s ease;
+      }
+
+      .logo {
+        width: 90px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        margin: 10px 0;
+      }
+
+      .badge {
+        background: #22c55e;
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-size: 13px;
+        display: inline-block;
+      }
+
+      .profile {
+        margin-top: 20px;
+      }
+
+      .profile img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid #38bdf8;
+        object-fit: cover;
+        animation: float 4s infinite ease-in-out;
+      }
+
+      .info {
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      .info p {
+        margin: 6px 0;
+      }
+
+      .documents {
+        margin-top: 20px;
+      }
+
+      .documents a {
+        display: block;
+        background: #0ea5e9;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 8px;
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+      }
+
+      .documents a:hover {
+        background: #0284c7;
+        transform: scale(1.05);
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #94a3b8;
+      }
+
+      /* Animations */
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+        class="logo"
+      />
+
+      <h1>Administrateur SHOPNET</h1>
+
+      <span class="badge">Profil vérifié</span>
+
+      <div class="profile">
+        <img src="https://i.imgur.com/2DhmtJ4.png" />
+
+        <h2>MATONDO MAYA Tegra</h2>
+      </div>
+
+      <div class="info">
+        <p><b>ID Administratif :</b> SN-2025-001</p>
+        <p><b>Poste :</b> Président Directeur Général</p>
+        <p><b>Entreprise :</b> SHOPNET</p>
+        <p><b>Statut :</b> Administrateur Actif</p>
+        <p><b>Date d'intégration :</b> Janvier 2025</p>
+      </div>
+
+      <div class="documents">
+        <h3>Documents administratifs</h3>
+
+        <a href="#">📄 Lettre de nomination</a>
+
+        <a href="#">📄 Identification administrative</a>
+
+        <a href="#">📄 Accord de confidentialité</a>
+      </div>
+
+      <div class="footer">
+        Plateforme officielle SHOPNET Vérification administrative
+      </div>
+    </div>
+  </body>
+</html>
